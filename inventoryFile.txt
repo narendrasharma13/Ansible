@@ -1,2 +1,2 @@
-[slave machine]
+[slave]
 54.196.136.180
