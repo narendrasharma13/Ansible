@@ -10,5 +10,5 @@
       ping:
     - name: Print message with ansible_user
       ansible.builtin.debug:
-        msg: "Message print: {{ ansible_user }} {{ variable1 }}"
+        msg: "Message print: {{ ansible_user }}"
       when: ansible_user=="ec2-user"
