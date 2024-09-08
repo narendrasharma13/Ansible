@@ -1,0 +1,16 @@
+---
+- name: Run a sample playbook
+  hosts: all
+  gather_facts: false
+  vars:
+    ansible_user: ec2-user
+    ansible_ssh_pass: DevOps321
+  tasks:
+    - name: Execute ping command
+      ping:
+    - vars:
+        variable1 : hello variable1
+    - name: Print message with ansible_user
+      ansible.builtin.debug:
+        msg: "Message print: {{ ansible_user }} {{ variable1 }}"
+      when: ansible_user=="ec2-user"
