@@ -16,5 +16,4 @@
     - name: Print message using loop (range)
       ansible.builtin.debug:
         msg: "output range: {{ item }}"
-      loop : 
-        - {{ (range(0, 5))}}
+      loop : "{{ (range(0, 5))}}"
