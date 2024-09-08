@@ -2,8 +2,9 @@
   hosts: all
   tasks:
     - name: store output of shell into register
-      ansible.builtin.shell: ls
+      ansible.builtin.shell: pwd
       register : OUTPUT
+
     - name: Output print
       ansible.builtin.debug:
         msg: "print output {{ OUTPUT }}"
