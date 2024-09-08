@@ -1,0 +1,8 @@
+- name: Print register variable
+- hosts: all
+- task:
+  - name: store output of shell into register
+    ansible.builtin.shell: ls
+    register : OUTPUT
+    ansible.builtin.debug:
+      msg: "print output {{ OUTPUT }}"
