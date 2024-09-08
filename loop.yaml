@@ -17,3 +17,10 @@
       ansible.builtin.debug:
         msg: "output range: {{ item }}"
       loop : "{{ (range(0, 5))}}"
+    - name: Print message using loop (Map)
+      ansible.builtin.debug:
+        msg: "output map: {{ item.name }} : {{ item.quantity }}"
+      loop :
+        - {name:fruit,quantity:80}
+        - {name:apple,quantity:80}
+        - {name:orange,quantity:80}
