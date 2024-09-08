@@ -4,5 +4,6 @@
     - name: store output of shell into register
       ansible.builtin.shell: ls
       register : OUTPUT
+    - name: Output print
       ansible.builtin.debug:
         msg: "print output {{ OUTPUT }}"
