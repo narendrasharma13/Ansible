@@ -1,11 +1,11 @@
 - hosts: all
 - name: Run a sample playbook
   tasks:
-    - name: Execute ping
+    - name: Execute ping cmd
       ping:
     - name: print msg
       ansible.builtin.debug:
-        msg : message print sample
+        msg : message print {{ ansible_user }}
   vars:
     ansible_user: ec2-user
     ansible_password: DevOps321
