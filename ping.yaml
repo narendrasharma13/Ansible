@@ -13,7 +13,6 @@
       ansible.builtin.debug:
         msg: "Message print: {{ ansible_user }}"
 
----
 - name: Nested YAML playbook
   hosts: all
   gather_facts: false
