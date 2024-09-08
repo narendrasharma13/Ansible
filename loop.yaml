@@ -21,6 +21,6 @@
       ansible.builtin.debug:
         msg: "output map: {{ item.name }} : {{ item.quantity }}"
       loop :
-        - {name:fruit,quantity:80}
-        - {name:apple,quantity:80}
-        - {name:orange,quantity:80}
+        - { name: fruit, quantity: 80 }
+        - { name: apple, quantity: 80 }
+        - { name: orange, quantity: 80 }
