@@ -1,20 +1,23 @@
 ---
-- hosts: all
-  name: Run a sample playbook
-  tasks:
-    - name: Execute ping cmd
-      ping:
-    - name: print msg
-      ansible.builtin.debug:
-        msg : message print {{ ansible_user }}
+- name: Run a sample playbook
+  hosts: all
+  gather_facts: false
   vars:
     ansible_user: ec2-user
-    ansible_password: DevOps321
+    ansible_ssh_pass: DevOps321
+  tasks:
+    - name: Execute ping command
+      ping:
+
+    - name: Print message with ansible_user
+      ansible.builtin.debug:
+        msg: "Message print: {{ ansible_user }}"
 
 ---
-- hosts : all
-  name : nested yaml
+- name: Nested YAML playbook
+  hosts: all
+  gather_facts: false
   tasks:
-    - name : print msg
+    - name: Print message from nested playbook
       ansible.builtin.debug:
-      msg : printing new yaml
+        msg: "Printing from new YAML"
