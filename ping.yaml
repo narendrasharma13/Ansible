@@ -1,5 +1,5 @@
 - hosts: all
-  name: Run a sample playbook
+- name: Run a sample playbook
   tasks:
     - name: Execute ping
       ping:
