@@ -8,7 +8,7 @@
   tasks:
     - name: Execute ping command
       ping:
-    - vars:
+      vars:
         variable1 : hello variable1
     - name: Print message with ansible_user
       ansible.builtin.debug:
