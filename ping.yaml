@@ -2,6 +2,7 @@
   name: Run a sample playbook
   tasks:
     - name: Execute ping
-      ping: 
-        ansible_user: ec2-user
-        ansible_password: DevOps321
+      ping:
+  vars:
+    ansible_user: ec2-user
+    ansible_password: DevOps321
