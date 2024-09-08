@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: all
   name: Run a sample playbook
   tasks:
     - name: Execute ping
